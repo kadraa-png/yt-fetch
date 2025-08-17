@@ -65,13 +65,13 @@ pip install -U yt-dlp rich
 ### Single video by URL
 
 ```bash
-./yt-fetch --single "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+python ./yt-fetch.py --single "https://www.youtube.com/watch?v=xxxxxxxxxxx"
 ```
 
 ### Search query (top 3 results as MP3)
 
 ```bash
-./yt-fetch --single "lofi hip hop" --mode mp3 --top 3
+python ./yt-fetch.py --single "lofi hip hop" --mode mp3 --top 3
 ```
 
 ### Bulk mode
@@ -79,33 +79,33 @@ pip install -U yt-dlp rich
 `bulk.txt`:
 
 ```
-https://www.youtube.com/watch?v=TMs4maVTx4Y
-japan
-bombe devedesetih
+https://www.youtube.com/watch?v=xxxxxxxxxxx
+lofi
+billie jean
 ```
 
 Run:
 
 ```bash
-./yt-fetch --bulk-file bulk.txt --mode mp4 --flat --out ./downloads
+python ./yt-fetch.py --bulk-file bulk.txt --mode mp4 --flat --out ./downloads
 ```
 
 ### Dry-run (no downloads, just list results)
 
 ```bash
-./yt-fetch --bulk-file bulk.txt --dry-run --top 2
+python ./yt-fetch.py --bulk-file bulk.txt --dry-run --top 2
 ```
 
 ### Force re-download
 
 ```bash
-./yt-fetch --bulk-file bulk.txt --redownload
+python ./yt-fetch.py --bulk-file bulk.txt --redownload
 ```
 
 ### Download subtitles
 
 ```bash
-./yt-fetch --single "python tutorial" --subs
+python ./yt-fetch.py --single "i use arch btw" --subs
 ```
 
 ---
@@ -172,20 +172,20 @@ Run:
     Try:
 
     ```bash
-    ./yt-fetch --no-aria2c --force-ipv4 --cookies-from-browser firefox
+    python ./yt-fetch.py --no-aria2c --force-ipv4 --cookies-from-browser firefox
     ```
 
 -   **ffmpeg errors**  
     Re-run with:
 
     ```bash
-    ./yt-fetch --redownload -k
+    python ./yt-fetch.py --redownload -k
     ```
 
 -   **Dry-run slow**  
     Limit search results with `--top`:
     ```bash
-    ./yt-fetch --bulk-file bulk.txt --dry-run --top 3
+    python ./yt-fetch.py --bulk-file bulk.txt --dry-run --top 3
     ```
 
 ---
